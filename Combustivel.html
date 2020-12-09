@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcular(oper){
+        var gaso = document.calcform.valor1.value
+        var eta = document.calcform.valor2.value
+        var res = eta/gaso;
+        
+        if  (res<0.7){
+            window.alert('etanol é melhor')
+        } else {
+            res > 0.7
+            window.alert('gasolina é melhor')
+        }
+        document.calcform.res.value = res;
+        
+    }
+  
+            </script>
+</head>
+<body>
+    <form name="calcform" method="post" action="">
+        <fieldset>
+           <label for="valor1">Qual o valor da gasolina? </label>
+           <input type="text" name="valor1" id="valor1" />
+     
+           <label for="valor2">Qual o valor do etanol? </label>
+           <input type="text" name="valor2" id="valor2" />
+     
+           <label for="res">Resultado:</label>
+           <input type="text" name="res" id="res" />
+     
+           <input type="button" value="calcular" class="botao" onClick="calcular(document.calcform.res.value)"/>
+        </fieldset>
+     </form>
+</body>
